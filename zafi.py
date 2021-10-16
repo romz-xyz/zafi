@@ -73,6 +73,7 @@ def folder():
 IP = requests.get('https://api.ipify.org').text
 def banner():
 	print (''' %s 
+ © Group%s
  __________       _____.__ 
  \____    /____ _/ ____\__| %s> %sZona
    /     /\\__  \\\   __\|  | %s> %sAkun 
@@ -82,7 +83,7 @@ def banner():
  %s[%s*%s] By : %sRomi Afrizal
  %s[%s*%s] --------------------------------------
  [%s*%s] IP : %s%s
-'''%(K,H,K,H,K,H,K,H,K,P,K,P,H,P,K,P,K,P,H,IP))
+'''%(H,K,H,K,H,K,H,K,H,K,P,K,P,H,P,K,P,K,P,H,IP))
 
 # MASUK TOKEN (TOKEN LISTRIK)
 header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ ;]", "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
@@ -94,7 +95,7 @@ def masuk():
     	print("%s [!] Isi yang benar kentod "%(M));exit()
     elif rom in ('1','01'):
         jalan("\n%s [%s!%s] Wajib gunakan akun tumbal dilarang akun utama"%(P,M,P))
-    	romz = raw_input('\n%s [?] Token : %s'%(P,K))
+    	romz = raw_input('%s [?] Token : %s'%(P,K))
         if romz in(""):
         	print("%s [!] Isi yang benar kentod "%(M));exit()
     	try:
@@ -117,11 +118,11 @@ def masuk():
         print (" - jika sudah jangan lupa di salin \n");jeda(2)
         nanya = raw_input('%s [?] Anda paham? [%sy%s/%sn%s] :%s '%(P,H,P,M,P,K))
         if nanya in(""):
-        	print ("%s%s saya bertanya wajib di jawab "%(M,til));jeda(2);masuk()
+        	print ("%s [!] saya bertanya wajib di jawab "%(M));jeda(2);masuk()
         elif nanya in("y","Y"):
-        	print ("\n%s%s selamat anda pintar :* "%(H,til));jeda(2);masuk()
+        	print ("\n%s [√] selamat anda pintar :* "%(H));jeda(2);masuk()
         elif nanya in("n","N"):
-        	print ("\n%s%s anda sungguh tolol "%(M,til));jeda(2);os.system("xdg-open https://youtu.be/IG5QfdxRkeY");masuk()
+        	print ("\n%s [!] anda sungguh tolol "%(M));jeda(2);os.system("xdg-open https://youtu.be/IG5QfdxRkeY");masuk()
     elif rom in ('0', '00'):
     	exit('\n')
     else:
@@ -133,7 +134,7 @@ def menu():
     try:
     	romz = open('token.txt', 'r').read()
     except IOError:
-        print ("%s%s Token invalid "%(M,til));jeda(2);os.system('rm -rf token.txt');masuk()
+        print ("%s [!] Token invalid "%(M));jeda(2);os.system('rm -rf token.txt');masuk()
     try:
         r = requests.get('https://graph.facebook.com/me?access_token='+romz,headers=header)
         a = json.loads(r.text)
