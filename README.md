@@ -5,7 +5,7 @@ $ pkg install python2 <br>
 $ pkg install git <br>
 $ git clone https://github.com/Mark-Zuck/zafi <br>
 $ cd zafi <br>
-$ pip2 install -r zafi <br>
+$ pip2 install -r zona.zafi <br>
 $ python2 zafi.py <br>
 #
 #### Info Menu :<br>
