@@ -307,7 +307,7 @@ class zona_akun_facebook_indonesia:
         if unikers in ('Y', 'y'):
             print '\n %s[%s!%s] cth : %ssayang,anjing%s gunakan , (koma) untuk pemisah '%(P,M,P,H,P)
             while True:
-                pwx = raw_input('\n %s[?] set password :%s '%(P,K))
+                pwx = raw_input(' %s[?] set password :%s '%(P,K))
                 if pwx == '':
                     print '\n %s[!] jangan kosong '%(M)
                 elif len(pwx)<=5:
