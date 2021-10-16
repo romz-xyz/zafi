@@ -3,10 +3,10 @@
 $ pkg update && pkg upgrade <br>
 $ pkg install python2 <br>
 $ pkg install git <br>
-$ git clone https://github.com/Mark-Zuck/bff-2 <br>
-$ cd bff-2 <br>
-$ pip2 install -r bff-2.txt<br>
-$ python2 bff-2.py<br>
+$ git clone https://github.com/Mark-Zuck/zafi <br>
+$ cd zafi <br>
+$ pip2 install -r zafi <br>
+$ python2 zafi.py <br>
 #
 #### Info Menu :<br>
  [01] Dump id public <br>
