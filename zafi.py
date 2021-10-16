@@ -592,7 +592,7 @@ class zona_akun_facebook_indonesia:
         
 # GANTI USER AGENT
 def useragent():
-	print ("\n%s [%s01%s] Ganti user agents "%(P,KP))
+	print ("\n%s [%s01%s] Ganti user agents "%(P,K,P))
 	print (" [%s02%s] Cek user agents "%(K,P))
 	print (" [%s00%s] Kembali "%(M,P))
 	uas()
