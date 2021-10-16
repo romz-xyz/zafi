@@ -1,4 +1,3 @@
-##### Update 08 Oktober 2021
 ## Installation
 $ pkg update && pkg upgrade <br>
 $ pkg install python2 <br>
