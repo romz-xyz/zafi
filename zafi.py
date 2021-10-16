@@ -318,7 +318,7 @@ class zona_akun_facebook_indonesia:
                         if ind == '':
                             print("%s [!] Isi yang benar kentod "%(M));self.zona()
                         elif ind in ('1', '01'):
-                            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+                            print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
                             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
                             with Lampung(max_workers=30) as log:
                                 for akun in self.id:
@@ -328,7 +328,7 @@ class zona_akun_facebook_indonesia:
                                     except: pass
                             os.remove(self.apk);exit()
                         elif ind in ('2', '02'):
-                            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+                            print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
                             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
                             with Lampung(max_workers=30) as log:
                                 for akun in self.id:
@@ -338,7 +338,7 @@ class zona_akun_facebook_indonesia:
                                     except: pass
                             os.remove(self.apk);exit()
                         elif ind in ('2', '03'):
-                            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+                            print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
                             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
                             with Lampung(max_workers=30) as log:
                                 for akun in self.id:
@@ -370,7 +370,7 @@ class zona_akun_facebook_indonesia:
         if suuu == '':
             print("%s [!] Isi yang benar kentod "%(M));self.langsung()
         elif suuu in ('1', '01'):
-            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+            print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
             with Lampung(max_workers=30) as log:
             	for akun in self.id: 
@@ -386,7 +386,7 @@ class zona_akun_facebook_indonesia:
                         pass
             os.remove(self.apk);exit()
         elif suuu in ('2', '02'):
-            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+            print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
             with Lampung(max_workers=30) as log:
             	for akun in self.id: 
@@ -402,7 +402,7 @@ class zona_akun_facebook_indonesia:
                         pass
             os.remove(self.apk);exit()
         elif suuu in ('3', '03'):
-            print '\n [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(K,P,H,P,H,ha, op, ta);jeda(0.2)
+            print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
             with Lampung(max_workers=30) as log:
             	for akun in self.id: 
