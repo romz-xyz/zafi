@@ -348,7 +348,7 @@ class ngentod:
                                     except: pass
                             os.remove(self.apk);exit()
                         else:
-                            print '\n %s[!] isi yang benar kentod'%(N,M,N);self.zona()
+                            print '\n %s[!] isi yang benar kentod'%(M);self.zona()
                     print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
                     print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
                     print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
