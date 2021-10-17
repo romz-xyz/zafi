@@ -162,7 +162,7 @@ def menu():
     elif unik in['3','03']:
         postingan(romz)
     elif unik in['4','04']:
-        zona_akun_facebook_indonesia().romiy()
+        ngentod().romiy()
     elif unik in['5','05']:
     	useragent()
     elif unik in['6','06']:
@@ -288,7 +288,7 @@ def postingan(romz,headers=header):
 
 
 # START CRACK
-class zona_akun_facebook_indonesia:
+class ngentod:
 
     def __init__(self):
         self.id = []
