@@ -419,7 +419,7 @@ class ngentod:
 
     def b_api(self, user, zona):
         global ok,cp,loop
-        print('\r [%s*%s] %s/%s OK-:%s - CP-:%s '%(K,P,loop,len(self.id),len(ok),len(cp))),
+        print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in zona:
             pw = pw.lower()
@@ -473,7 +473,7 @@ class ngentod:
 
     def basic(self, user, zona):
         global ok,cp,loop
-        print('\r [%s*%s] %s/%s OK-:%s - CP-:%s '%(K,P,loop,len(self.id),len(ok),len(cp))),
+        print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in zona:
             pw = pw.lower()
@@ -523,7 +523,7 @@ class ngentod:
 
     def mobil(self, user, zona):
         global ok,cp,loop
-        print('\r [%s*%s] %s/%s OK-:%s - CP-:%s '%(K,P,loop,len(self.id),len(ok),len(cp))),
+        print('\r %s*--> %s/%s OK-:%s - CP-:%s '%(P,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
         for pw in zona:
             pw = pw.lower()
