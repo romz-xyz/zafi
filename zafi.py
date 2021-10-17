@@ -2,9 +2,7 @@
 # coding=utf-8
 # coding by Romi Afrizal
 # Note : jangan di ubah lagi! nanti error, script udah enak
-
-# Open source code team | ngotak dikit cok kalau mau recode author jgn di ubah
-# Sekedar mengingatkan kalau mau decrypt script ini jangan salahin gw, jika semua data-data di hp (handphone) lu hilang (terhapus)
+# Open source code team | ngotak dikit cok jangan jual di perjual belikan 
 
 Hj = '\x1b[1;92m' 
 Mt = '\x1b[0m' 
