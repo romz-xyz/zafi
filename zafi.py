@@ -15,7 +15,7 @@ ingfo = (
  - fanspage    : facebook.com/100022086172556
  - whatsap     : +6282371648186
  - github      : github.com/Mark-Zuck
- - script name : bff-2
+ - script name : ZAFI (Zona Akun Facebook Indonesia)
  - version     : 1.1
  
 %s"""%(Hj,Mt))
