@@ -59,7 +59,7 @@ def folder():
 	except:
 		pass
 # LOGO (LO GOBLOK)
-IP = requests.get('https://api.ipify.org').text
+IP = ("-")
 def banner():
 	print (''' %s 
  © Group%s \n __________       _____.__  \n \____    /____ _/ ____\__| %s> %sZona \n   /     /\\__  \\\   __\|  | %s> %sAkun \n  /     /_ / __ \|  |  |  | %s>%s Facebook \n /_______ (____  /__|  |__| %s>%s Indonesia \n         \/    \/ \n %s[%s*%s] By : %sRomi Afrizal \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
