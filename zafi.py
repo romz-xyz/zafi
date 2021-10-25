@@ -535,7 +535,7 @@ def menu():
     except requests.exceptions.ConnectionError:
         exit("%s [!] Kesalahan koneksi "%(M))
     banner()
-    print (' %s[ welcome %s%s%s ] \n'%(P,K,nama,P))
+    print ('\n %s[ welcome %s%s%s ] \n'%(P,K,nama,P))
     print (' [%s01%s] Dump id public'%(K,P)) 
     print (' [%s02%s] Dump id followers'%(K,P)) 
     print (' [%s03%s] Dump id reaction post'%(K,P)) 
