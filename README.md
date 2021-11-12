@@ -11,9 +11,10 @@ $ python2 zafi.py <br>
  [01] Dump id public <br>
  [02] Dump id followers <br>
  [03] Dump id reaction post <br>
- [04] Start crack <br>
- [05] Ganti user agent <br>
- [06] Cek hasil crack <br>
+ [04] Crack cari nama (Instagram) <br>
+ [05] Start crack <br>
+ [06] Ganti user agent <br>
+ [07] Cek hasil crack <br>
  [00] Keluar (hapus token) <br>
 #### Methode crack :
  [01] methode b-api (crack cepat) <br>
