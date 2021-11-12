@@ -89,11 +89,11 @@ def masuk():
         print (" - siapkan akun facebook (wajib akun tumbal)");jeda(2)
         print (" - loginkan akun facebook (tumbal) di browser %sChrome %s"%(O,H));jeda(2)
         print (" - url alamat wajib %shttps://m.facebook.com %s(mode data)"%(O,H));jeda(2)
-        print (" - salin link : %shttps://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_"%(O));jeda(2)
+        print (" - salin link : %sview-source:https://business.facebook.com/business_locations"%(O));jeda(2)
         print ("%s - taruh link tersebut di url alamat facebook lalu klik cari "%(H));jeda(2)
         print (" - jika sudah, klik %stitik tiga %spojok kanan atas "%(O,H));jeda(2)
         print (" - kemudian klik %sCari di Halaman %s"%(O,H));jeda(2)
-        print (" - ketik %sEAAAA %sakan muncul acces token."%(O,H));jeda(2)
+        print (" - ketik %sEAAG %sakan muncul acces token."%(O,H));jeda(2)
         print (" - jika sudah jangan lupa di salin \n");jeda(2)
         nanya = raw_input('%s [?] Anda paham? [%sy%s/%sn%s] :%s '%(P,H,P,M,P,K))
         if nanya in(""):
