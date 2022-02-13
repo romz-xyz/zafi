@@ -1,6 +1,6 @@
 #!/usr/bin/python2
-# coding=utf-8
-# coding by Romi Afrizal
+# coding=utf-8Anchu Jrj
+# coding by 
 # Note : jangan di ubah lagi! nanti error, script udah enak
 # Open source code team | ngotak dikit cok jangan jual di perjual belikan 
 
@@ -10,10 +10,10 @@ ingfo = (
 """%s
  • Info script :
  	
- - author      : Romi Afrizal
- - facebook    : facebook.com/romi.afrizal.102
- - fanspage    : facebook.com/100022086172556
- - whatsap     : +6282371648186
+ - author      : HaeckerFb
+ - facebook    : http://facebook.com/haeckerfb.haeckerfb.5
+ - fanspage    : http://facebook.com/profile.php?id=100075696644308
+ - whatsap     : +682261310817
  - github      : github.com/Mark-Zuck
  - script name : ZAFI (Zona Akun Facebook Indonesia)
  - version     : 1.1
@@ -62,7 +62,9 @@ def folder():
 IP = requests.get("https://api.ipify.org/").text
 def banner():
 	print (''' %s 
- © Group%s \n __________       _____.__  \n \____    /____ _/ ____\__| %s> %sZona \n   /     /\\__  \\\   __\|  | %s> %sAkun \n  /     /_ / __ \|  |  |  | %s>%s Facebook [Meta] \n /_______ (____  /__|  |__| %s>%s Indonesia \n         \/    \/ \n %s[%s*%s] By : %sRomi Afrizal \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
+ © Group%s ╔★═█✬🄵🄰🄲🄴🄱🄾🄾🄺✬█║▷ ╚═█████▓▒█▒▓█████║〓 ○°◢███◤✇═╩═╩═╝╯
+◢███◤
+████║ By : %sHAECKERFB \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
  (H,K,H,K,H,K,H,K,H,K,P,K,P,H,P,K,P,K,P,H,IP))
 # MASUK TOKEN (TOKEN LISTRIK)
 header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ ;]", "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
