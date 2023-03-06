@@ -6,15 +6,15 @@
 
 Hj = '\x1b[1;92m' 
 Mt = '\x1b[0m' 
-ingfo = (
+ingfo = (085759162117
 """%s
  • Info script :
  	
- - author      : Romi Afrizal
- - facebook    : facebook.com/romi.afrizal.102
- - fanspage    : facebook.com/100022086172556
- - whatsap     : +6282371648186
- - github      : github.com/Mark-Zuck
+ - author      : CLaY
+ - facebook    : 
+ - fanspage    : 
+ - whatsap     : 
+ - github      : github.com/CLAOUPY4
  - script name : ZAFI (Zona Akun Facebook Indonesia)
  - version     : 1.1
  
@@ -61,8 +61,8 @@ def folder():
 	try:os.mkdir('data')
 	except:pass
 	try:
-		ua_ = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-		open("data/ua.txt","w").write(ua_)
+		ua_ = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]
+		(ua_)
 	except:
 		pass
 
@@ -347,8 +347,7 @@ class ngentod:
     	try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-        global ok,cp,loop
+        	ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]
         for pw in zona:
             pw = pw.lower()
             ses = requests.Session()
@@ -402,8 +401,8 @@ class ngentod:
         try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-        global ok,cp,loop
+        	ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]
+		global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
             ses = requests.Session()
@@ -462,8 +461,8 @@ class ngentod:
         try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-        global ok,cp,loop
+        	ua = '10; Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]
+		global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
             ses = requests.Session()
@@ -616,8 +615,8 @@ def uas():
             	jalan("%s [!]  Anda akan di arahkan ke browser "%(H));jeda(2)
             	os.system("am start https://www.google.com/search?q=My+user+agent>/dev/null");jeda(2);useragent()
             elif ua in("default","Default","DEFAULT"):
-                ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-                open("data/ua.txt","w").write(ua_)
+                ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.141 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/394.1.0.51.107;]
+		open("data/ua.txt","w").write(ua_)
                 print ("\n%s [√] menggunakan user agent bawaan"%(H));jeda(2);menu()
             open("data/ua.txt","w").write(ua);jeda(2)
             print ("\n%s [√] berhasil mengganti user agent"%(H));jeda(2);menu()
